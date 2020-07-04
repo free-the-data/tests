@@ -1,0 +1,60 @@
+<!doctype html>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+  jQuery.get('https://raw.githubusercontent.com/free-the-data/tests/gh-pages/clicky_test.svg', function(data) {
+    $(document.body).append(data.documentElement);
+    init();
+  });
+  function init() {
+    /* Add JavaScript here */
+	  $('#click1').click(function() {
+  $('#show1').show();
+});
+	  
+	  $('#click1').click(function() {
+  $('#hide1').hide();
+});
+
+	  $('#show1').click(function() {
+  $('#hide1').show();
+});
+	  
+	  $('#show1').click(function() {
+  $('#show1').hide();
+});
+
+	  	  $('#click2').click(function() {
+  $('#show2').show();
+});
+	  
+	  $('#click2').click(function() {
+  $('#hide2').hide();
+});
+
+	  $('#show2').click(function() {
+  $('#hide2').show();
+});
+	  
+	  $('#show2').click(function() {
+  $('#show2').hide();
+});
+	  	  $('#click3').click(function() {
+  $('#show3').show();
+});
+	  
+	  $('#click3').click(function() {
+  $('#click3').hide();
+});
+
+	  $('#show3').click(function() {
+  $('#click3').show();
+});
+	  
+	  $('#show3').click(function() {
+  $('#show3').hide();
+});
+  }
+</script>
+<style>
+
+</style>
