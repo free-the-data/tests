@@ -5,9 +5,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js"></script>
 </head>
-
+<style>
+html, body { margin:0; padding:0 }
+embed { width: 100%; height: 100% }
+</style>
 <body>
-
+<div>
   <svg enable-background="new 0 0 1366 768" version="1.1" viewBox="10 10 1366 768" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
   	.st0{fill:#FF4848;}
@@ -17,10 +20,7 @@
   	.st4{fill:#03DFE0;}
   	.st5{fill:#22AAA3;}
   </style>
-  <style>
-html, body { margin:0; padding:0 }
-embed { width: 100%; height: 100% }
-</style>
+
     <circle  id = "r1" class="st0" cx="413.1" cy="285.4" r="58.4"/>
   	<circle id = "r2" class="st3" cx="795.2" cy="653.1" r="63"/>
   	<circle id = "r3" class="st1" cx="216.5" cy="155.5" r="103.5"/>
@@ -35,7 +35,7 @@ embed { width: 100%; height: 100% }
   	<circle id = "blue3" class="st2" cx="1068.3" cy="138.5" r="90.2"/>
 
   </svg>
-
+</div>
 <script>
 const floatAnimation = () => {
          const tlCan = new TimelineMax({repeat:-1});
@@ -93,4 +93,3 @@ const floatAnimation = () => {
 
 </body>
 </html>
-
