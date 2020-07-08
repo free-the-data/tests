@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js"></script>
+</head>
+
+<body>
+
+  <svg enable-background="new 0 0 1366 768" version="1.1" viewBox="0 0 1366 768" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style type="text/css">
+  	.st0{fill:#FF4848;}
+  	.st1{fill:#730211;}
+  	.st2{fill:#297775;}
+  	.st3{fill:#B51818;}
+  	.st4{fill:#03DFE0;}
+  	.st5{fill:#22AAA3;}
+  </style>
+    <circle  id = "r1" class="st0" cx="413.1" cy="285.4" r="58.4"/>
+  	<circle id = "r2" class="st3" cx="795.2" cy="653.1" r="63"/>
+  	<circle id = "r3" class="st1" cx="216.5" cy="155.5" r="103.5"/>
+  	<circle id = "red1" class="st0" cx="121.4" cy="562.3" r="117.1"/>
+  	<circle id = "red2" class="st3" cx="797.4" cy="285.1" r="94"/>
+  	<circle id = "red3" class="st1" cx="1146.9" cy="615.5" r="140.1"/>
+  	<circle id = "b1" class="st4" cx="656.3" cy="426.4" r="55.7"/>
+  	<circle id = "b2" class="st5" cx="83" cy="249" r="53"/>
+  	<circle id = "b3" class="st2" cx="503.3" cy="698.4" r="54.2"/>
+  	<circle id = "blue1" class="st4" cx="1157.1" cy="359.7" r="117.7"/>
+  	<circle id = "blue2" class="st5" cx="532.4" cy="153.7" r="71.3"/>
+  	<circle id = "blue3" class="st2" cx="1068.3" cy="138.5" r="90.2"/>
+
+  </svg>
+
+<script>
+const floatAnimation = () => {
+         const tlCan = new TimelineMax({repeat:-1});
+         /*Can Animation*/
+        tlCan
+            //move top left
+        .to('#r3', 3, { y:'-=100', x:'+=100',  rotation:'-=5', ease:Power1.easeInOut})
+            //move down right
+        .to('#r3', 2, { y:'+=12', x:'-=20', rotation:'-=5', ease:Power1.easeInOut})
+        .to('#r3', 3, { y:'-=20',  rotation:'+=5', ease:Power1.easeInOut})
+        .to('#r3', 3, { y:'+=20',  rotation:'+=5', ease:Power1.easeInOut})
+        .to('#r3', 3, { y:'-=50', ease:Power1.easeInOut})
+        .to('#r3', 3, { y:'+=50', ease:Power1.easeInOut})
+        .to('#r3', 3, { y:'-=30', ease:Power1.easeInOut})
+        .to('#r3', 3, { y:'+=30', ease:Power1.easeInOut})
+        .to('#r3', 2, { y:'-=30', ease:Power1.easeInOut})
+        .to('#r3', 2, { y:'+=30', ease:Power1.easeInOut})
+      TweenLite.to(tlCan, 27, {ease:Power1.easeInOut})
+
+    }
+    floatAnimation();
+
+    const floatAnimation2 = () => {
+             const t2Can = new TimelineMax({repeat:-1});
+             /*Can Animation*/
+            t2Can
+                //move top left
+                .to('#red1', 3, { y:'-=30', x:'+=20',  rotation:'-=5', ease:Power1.easeInOut})
+                    //move down right
+                .to('#red1', 2, { y:'+=30', x:'-=20', rotation:'-=5', ease:Power1.easeInOut})
+                .to('#red1', 3, { y:'-=20',  rotation:'+=5', ease:Power1.easeInOut})
+                .to('#red1', 3, { y:'+=20',  rotation:'+=5', ease:Power1.easeInOut})
+                .to('#red1', 3, { y:'-=50', ease:Power1.easeInOut})
+                .to('#red1', 3, { y:'+=50', ease:Power1.easeInOut})
+                .to('#red1', 3, { y:'-=30', ease:Power1.easeInOut})
+                .to('#red1', 3, { y:'+=30', ease:Power1.easeInOut})
+                .to('#red1', 2, { y:'-=30', ease:Power1.easeInOut})
+                .to('#red1', 2, { y:'+=30', ease:Power1.easeInOut})
+          TweenLite.to(t2Can, 27, {ease:Power1.easeInOut})
+
+        }
+        floatAnimation2();
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
