@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div id="yayid" class="yay"  data-splitting>  </div>
+
+  <div class = "txt" id = "object">
+  DATA
+</div>
+
+<div class = "txt1" id = "object1">
+DATA
+</div>
+
+  <svg version="1.1" class = "full_logo" id="full_logo_id" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  	 viewBox="0 0 591 312.3" style="enable-background:new 0 0 591 312.3;" xml:space="preserve">
+
+  <g class = "darkteal" id="box">
+  		<path class="st0" d="M332.5,215.6V0H0v312.3h332.5V307h-17.8v-91.3L332.5,215.6L332.5,215.6z M104.2,22.2h31.6
+  			c18,0,33.4,6.2,33.4,27c0,11.9-5.4,19.7-13.5,24.1l18.2,32.4h-24.7l-14.4-28h-8.5v28h-22.1L104.2,22.2L104.2,22.2z M89.8,40.7
+  			H57.4v15.9h27.8v18.5H57.4v30.6H35.3V22.2h54.5V40.7z M156.6,143.5h-22.1v65h-22.1v-65H90.3V125h66.3V143.5z M238.1,208.5H216
+  			v-33.2h-25v33.2h-22.1V125H191v31.1h25V125h22.1V208.5z M240.4,105.7h-55.3V22.2h54v18.5h-31.9v13.1h27.2v18.5h-27.2v14.9h33.2
+  			V105.7z M311.8,208.5h-55.3V125h54v18.5h-31.9v13.1h27.2v18.5h-27.2V190h33.2L311.8,208.5L311.8,208.5z M311.8,105.7h-55.3V22.2
+  			h54v18.5h-31.9v13.1h27.2v18.5h-27.2v14.9h33.2L311.8,105.7L311.8,105.7z"/>
+  		<path class="st0" d="M147.6,49.1c0-7.2-4.6-9.5-13.4-9.5h-8v20.6h8C143,60.2,147.6,56.3,147.6,49.1z"/>
+  </g>
+
+
+  </svg>
+
+
+
+  <style type="text/css">
+  @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap);
+
+
+
+  .darkteal{fill:#0098d9;}
+
+
+  body {background: #e7e8e0;
+    height: 3000px;
+  }
+  #object{
+    font-family: 'Open Sans', sans-serif;
+    font-size:160px;
+    position:fixed;
+    opacity:1;
+    left:0px;
+    bottom:219px;
+    z-index: 1;
+    color:#e7e8e0;}
+
+    #object1{
+      font-family: 'Open Sans', sans-serif;
+      font-size:160px;
+      position:fixed;
+      opacity:1;
+      left:0px;
+      bottom:219px;
+      z-index: -1;
+      color:#0098d9;}
+  
+
+  .full_logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: -1;}
+
+
+#yayid {
+        position: fixed;
+        left: 52.75%;
+        top: 538px;
+        height: 150px;
+        width: 29px;
+        background: #0098d9;
+    }
+
+      <rect id="rect" x=314px y=212.3px  class="darkteal" width=18.5px height=97.4px/>
+
+    #yay {position: absolute; top: 200px; left: -100px; height: 130px; width: 130px; color: green;}
+
+  </style>
+
+</body>
+
+<script>
+
+</script>
+
+</html>
+
+<script>
+var window_width = $(window).width() - $('#object').width();
+var document_height = $(document).height() - $(window).height();
+
+
+$(function () {
+    $(window).scroll(function () {
+        var scroll_position = $(window).scrollTop();
+        var object_position_left = window_width * (scroll_position / (document_height-150));
+        var object_position_bottom = 538 +  (-0.1 * scroll_position);
+
+        $('#object').css({
+            'left': object_position_left});
+        $('#object1').css({
+            'left': object_position_left});
+
+        $('#yayid').css({
+           'top': object_position_bottom});
+
+
+
+
+        if (object_position_left < 100) {
+          $('#object').fadeIn(10);
+          }  else if (object_position_left > 100) {
+           $('#object').fadeOut(100);
+          } else {
+            $('#object').css({
+                 'opacity':1});}
+
+
+
+
+
+
+    });
+});
+
+</script>
